@@ -1,0 +1,82 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f2e9e4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #22223b;
+}
+
+.dashboard {
+  background: #cad2c5;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.dashboard table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.dashboard th, .dashboard td {
+  border: 1px solid #4a4e69;
+  padding: 0.5rem;
+  text-align: center;
+  vertical-align: top;
+}
+
+.dashboard th {
+  background: #4a4e69;
+  color: #f2e9e4;
+}
+
+.response-preview {
+  text-align: right;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.response-preview pre {
+  white-space: pre-wrap;
+  background: #f2e9e4;
+  padding: 0.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin: 0;
+  line-height: 1.3;
+  font-size: 0.9rem;
+  max-height: 5.5em; /* shows ~4 lines */
+}
+
+.response-preview.expanded pre {
+  max-height: 500px; /* expand naturally */
+}
+
+.expand-toggle {
+  display: block;
+  text-align: right;
+  font-size: 0.85rem;
+  color: #4a4e69;
+  margin-top: 5px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.expand-toggle:hover {
+  text-decoration: underline;
+  color: #22223b;
+}
