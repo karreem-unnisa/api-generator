@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+# ⚙️ API Endpoint Generator (Frontend)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern web interface to create, manage, and test mock API endpoints dynamically.  
+This project allows users to visually design REST API endpoints, define response structures, and simulate backend responses — ideal for prototyping or testing frontend applications.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Project Overview
 
-### `npm start`
+This **API Endpoint Generator** provides a dashboard where users can:
+- Create new mock API endpoints (name, URL, method, and response body).
+- View, edit, or delete existing endpoints.
+- Simulate how endpoints would respond to API requests.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🧩 Features Implemented (Frontend)
 
-### `npm test`
+✅ **Interactive Endpoint Form** – Create or update endpoints with live validation.  
+✅ **Dynamic JSON Input** – Supports structured mock responses for each endpoint.  
+✅ **Modal-Based Endpoint Table** – View and manage all existing endpoints in a clean modal view.  
+✅ **Modern UI/UX** – Styled with custom CSS for a smooth, intuitive interface.  
+✅ **Real-Time Sync** – Automatically refreshes endpoint data after creation or deletion.  
+✅ **Responsive Design** – Fully usable across desktop and tablet devices.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🔮 Planned Future Improvements (Backend Integration)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+In the full-stack version of this project, the backend (Node.js + Express + MySQL) will include:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+🧠 **Persistent Storage** – Save all endpoints in a connected MySQL database.  
+🔄 **Live Mock Response Handling** – Serve real API responses via generated routes.  
+🛡️ **Authentication** – Secure API endpoint management with user login.  
+📈 **Usage Analytics** – Track number of hits and endpoint performance stats.  
+💾 **Deployment-Ready Setup** – Fully hosted backend on Render and frontend on Vercel.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 🛠️ Tech Stack
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Frontend:** React, Axios, CSS  
+**Backend (planned):** Node.js, Express.js, MySQL  
+**Hosting:** Vercel (Frontend) + Render (Backend)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 💡 How to Run Locally
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
 
-## Learn More
+Install dependencies:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+npm install
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+Start the app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+npm start
+The app will run at http://localhost:3000
