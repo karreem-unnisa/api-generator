@@ -24,7 +24,6 @@
   gap: 1rem;
 }
 
-/* 🌸 Input field styling */
 .endpoint-form input[name="name"] {
   border: 2px solid #dee2e6;
   background: #ffffff;
@@ -39,7 +38,6 @@
   box-shadow: 0 0 0 4px rgba(82, 121, 111, 0.2);
 }
 
-/* 🌐 URL field styling */
 .endpoint-form input[name="url"] {
   border: 2px solid #dee2e6;
   background: #fdfdfd;
@@ -55,7 +53,6 @@
   box-shadow: 0 0 0 4px rgba(132, 169, 140, 0.2);
 }
 
-/* ⚙️ Method select dropdown */
 .endpoint-form select[name="method"] {
   border: 2px solid #dee2e6;
   background: #ffffff;
@@ -70,7 +67,6 @@
   border-color: #52796f;
 }
 
-/* 🧠 JSON textarea */
 .endpoint-form textarea[name="response_body"] {
   border: 2px solid #dee2e6;
   background: #f9fafb;
@@ -87,7 +83,6 @@
   box-shadow: 0 0 0 4px rgba(82, 121, 111, 0.2);
 }
 
-/* 🎨 Submit / Update button */
 .endpoint-form button[type="submit"] {
   background: linear-gradient(90deg, #52796f, #84a98c);
   color: white;
@@ -105,7 +100,7 @@
   transform: translateY(-2px);
 }
 
-/* 🧾 Table styling */
+
 .endpoint-form table {
   width: 100%;
   border-collapse: collapse;
@@ -156,7 +151,7 @@
   background: #b91c1c;
 }
 
-/* ✅ Message styling */
+
 .message {
   background: #52796f;
   color: #fff;
@@ -167,7 +162,8 @@
   font-weight: 600;
   box-shadow: 0 2px 8px rgba(82, 121, 111, 0.3);
 }
-/* 🌟 View button */
+
+
 .view-btn {
   background: linear-gradient(90deg, #a2a8d3, #6e85b2);
   color: white;
@@ -187,7 +183,7 @@
   transform: translateY(-2px);
 }
 
-/* 🌌 Modal Styles */
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -224,7 +220,7 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Close Button */
+
 .close-modal {
   position: absolute;
   top: 1rem;
@@ -241,7 +237,7 @@
   color: #ef4444;
 }
 
-/* Inside table (same style as before, slightly refined) */
+
 .modal-content table {
   width: 100%;
   border-collapse: collapse;

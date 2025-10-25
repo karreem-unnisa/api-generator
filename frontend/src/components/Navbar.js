@@ -5,7 +5,6 @@ import "./Navbar.css";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      {/* Make the h1 clickable to go to Landing */}
       <h1>
         <Link to="/" className="navbar-title">
           Mock API Generator

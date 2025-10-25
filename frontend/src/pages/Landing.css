@@ -4,7 +4,7 @@
   color: #22223b;
 }
 
-/* Header */
+
 .landing-header {
   display: flex;
   justify-content: space-between;
@@ -31,7 +31,7 @@
   color: #84a98c;
 }
 
-/* Hero Section */
+
 .hero {
   display: flex;
   flex-wrap: wrap;
@@ -75,7 +75,7 @@
   color: #22223b;
 }
 
-/* Hero Image */
+
 .hero-img {
   flex: 1;
   max-width: 400px;
@@ -83,7 +83,7 @@
   margin-top: 1rem;
 }
 
-/* Features Section */
+
 .features {
   display: flex;
   flex-wrap: wrap;
@@ -111,7 +111,6 @@
   color: #4a4e69;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 1rem;

@@ -95,7 +95,7 @@ const EndpointForm = () => {
         {message && <p className="message">{message}</p>}
       </div>
 
-      {/* 🌟 Modal for endpoints */}
+     
       {showModal && (
         <div className="modal-overlay">
           <div className="modal-content">
