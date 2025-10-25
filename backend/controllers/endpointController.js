@@ -1,7 +1,7 @@
 import { getDB } from "../config/db.js";
 import { createEndpoint, getAllEndpoints } from "../models/Endpoint.js";
 
-// Create a new endpoint
+
 export async function addEndpoint(req, res) {
   try {
     const { name, method, url, response_body } = req.body;
@@ -17,7 +17,7 @@ export async function addEndpoint(req, res) {
   }
 }
 
-// List all endpoints
+
 export async function listEndpoints(req, res) {
   try {
     const endpoints = await getAllEndpoints();
@@ -28,7 +28,7 @@ export async function listEndpoints(req, res) {
   }
 }
 
-// Update an existing endpoint
+
 export async function updateEndpoint(req, res) {
   try {
     const { id } = req.params;
@@ -55,7 +55,7 @@ export async function updateEndpoint(req, res) {
   }
 }
 
-// Delete an endpoint
+
 export async function deleteEndpoint(req, res) {
   try {
     const { id } = req.params;
