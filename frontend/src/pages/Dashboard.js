@@ -8,7 +8,9 @@ const Dashboard = () => {
 
   const fetchEndpoints = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/endpoints");
+      const res = await axios.get(
+        `${process.env.REACT_APP_API_URL}/api/endpoints`
+      );
       setEndpoints(res.data);
     } catch (err) {
       console.error("Error fetching endpoints:", err);
@@ -50,10 +52,23 @@ const Dashboard = () => {
                 <td>{ep.name}</td>
                 <td>{ep.url}</td>
                 <td>{ep.method}</td>
-                <td className={`response-preview ${isExpanded ? "expanded" : ""}`}>
-                  <pre>{isExpanded ? jsonText : limitedText + (jsonText.split("\n").length > 4 ? "\n..." : "")}</pre>
+                <td
+                  className={`response-preview ${
+                    isExpanded ? "expanded" : ""
+                  }`}
+                >
+                  <pre>
+                    {isExpanded
+                      ? jsonText
+                      : limitedText +
+                        (jsonText.split("\n").length > 4 ? "\n..." : "")}
+                  </pre>
+
                   {jsonText.split("\n").length > 4 && (
-                    <span className="expand-toggle" onClick={() => toggleExpand(ep.id)}>
+                    <span
+                      className="expand-toggle"
+                      onClick={() => toggleExpand(ep.id)}
+                    >
                       {isExpanded ? "▲ Show less" : "▼ Show more"}
                     </span>
                   )}
