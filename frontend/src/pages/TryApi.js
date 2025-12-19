@@ -9,7 +9,11 @@ const TryApi = () => {
 
   const handleTry = async () => {
     try {
-      const res = await axios({ url: `http://localhost:5000/mock${url}`, method });
+      const res = await axios({
+        url: `${process.env.REACT_APP_API_URL}/mock${url}`,
+        method,
+      });
+
       setResult(JSON.stringify(res.data, null, 2));
     } catch (err) {
       setResult(err.response?.data?.message || "❌ Error calling API");
@@ -27,12 +31,14 @@ const TryApi = () => {
           value={url}
           onChange={(e) => setUrl(e.target.value)}
         />
+
         <select value={method} onChange={(e) => setMethod(e.target.value)}>
           <option>GET</option>
           <option>POST</option>
           <option>PUT</option>
           <option>DELETE</option>
         </select>
+
         <button onClick={handleTry}>Send Request</button>
       </div>
 
