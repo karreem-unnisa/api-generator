@@ -43,7 +43,10 @@ const Dashboard = () => {
         </thead>
         <tbody>
           {endpoints.map((ep) => {
-            const jsonText = JSON.stringify(ep.response_body, null, 2);
+            const jsonText = typeof ep.response_body === "string"
+  ? ep.response_body
+  : JSON.stringify(ep.response_body, null, 2);
+
             const isExpanded = expandedRows[ep.id];
             const limitedText = jsonText.split("\n").slice(0, 4).join("\n");
 

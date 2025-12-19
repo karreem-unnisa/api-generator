@@ -4,7 +4,7 @@ export async function createEndpoint({ name, method, url, response_body }) {
   const db = getDB();
   const [result] = await db.execute(
     "INSERT INTO endpoints (name, method, url, response_body) VALUES (?, ?, ?, ?)",
-    [name, method, url, JSON.stringify(response_body)]
+    [name, method, url, response_body]
   );
   return result.insertId;
 }
