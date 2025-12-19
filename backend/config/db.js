@@ -4,12 +4,7 @@ let connection;
 
 export async function connectDB() {
   try {
-    connection = await mysql.createConnection({
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASS,
-      database: process.env.DB_NAME,
-    });
+    connection = await mysql.createConnection(process.env.DATABASE_URL);
     console.log("✅ MySQL Connected");
   } catch (error) {
     console.error("❌ DB Connection Failed", error);
