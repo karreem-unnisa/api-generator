@@ -71,14 +71,27 @@ const EndpointForm = () => {
     }
   };
 
-  const handleEdit = (ep) => {
-    setForm({
-      ...ep,
-      response_body: JSON.stringify(ep.response_body, null, 2),
-    });
-    setSelectedId(ep.id);
-    setShowModal(false);
-  };
+const handleEdit = (ep) => {
+  let formattedBody = ep.response_body;
+
+  // If the stored response_body is a string, parse it first
+  if (typeof formattedBody === "string") {
+    try {
+      formattedBody = JSON.parse(formattedBody);
+    } catch {
+      // ignore parse error
+    }
+  }
+
+  setForm({
+    ...ep,
+    response_body: JSON.stringify(formattedBody, null, 2),
+  });
+
+  setSelectedId(ep.id);
+  setShowModal(false);
+};
+
 
   return (
     <div className="endpoint-form">
