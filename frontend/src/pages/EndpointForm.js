@@ -72,20 +72,21 @@ const EndpointForm = () => {
   };
 
 const handleEdit = (ep) => {
-  let formattedBody = ep.response_body;
+  let formatted;
 
-  // If the stored response_body is a string, parse it first
-  if (typeof formattedBody === "string") {
+  if (typeof ep.response_body === "string") {
     try {
-      formattedBody = JSON.parse(formattedBody);
+      formatted = JSON.parse(ep.response_body);
     } catch {
-      // ignore parse error
+      formatted = ep.response_body; // fallback if it's just a plain string
     }
+  } else {
+    formatted = ep.response_body;
   }
 
   setForm({
     ...ep,
-    response_body: JSON.stringify(formattedBody, null, 2),
+    response_body: JSON.stringify(formatted, null, 2),
   });
 
   setSelectedId(ep.id);
