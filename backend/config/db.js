@@ -1,11 +1,11 @@
 import mysql from "mysql2/promise";
 
-let connection;
+let pool;
 
 export async function connectDB() {
   try {
-    connection = await mysql.createConnection(process.env.MYSQL_URL);
-    console.log("MySQL Connected");
+    pool = mysql.createPool(process.env.MYSQL_URL + "?connectionLimit=10");
+    console.log("MySQL Pool Connected");
   } catch (error) {
     console.error("DB Connection Failed", error);
     process.exit(1);
@@ -13,5 +13,5 @@ export async function connectDB() {
 }
 
 export function getDB() {
-  return connection;
+  return pool;
 }
